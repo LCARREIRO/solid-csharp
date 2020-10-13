@@ -10,7 +10,8 @@ namespace Alura.LeilaoOnline.WebApp.Dados
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=AluraLeiloesDB;Trusted_Connection=true");
+            // optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=AluraLeiloesDB;Trusted_Connection=true");
+            optionsBuilder.UseSqlite("Filename=./AluraLeiloesDB.sqlite");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
